@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truth and Dare Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div class="container">
-        <h1>Truth and Dare Game</h1>
-        <div id="player-input">
-            <input type="text" id="player-name" placeholder="Enter player name">
-            <button onclick="addPlayer()">Add Player</button>
-        </div>
-        <div id="players-list"></div>
-        
-        <div id="game-section" style="display: none;">
-            <h2 id="current-player"></h2>
-            <div>
-                <button onclick="pickTruth()">Truth</button>
-                <button onclick="pickDare()">Dare</button>
-            </div>
-            <p id="question"></p>
-            <p id="timer"></p>
-            <button id="done-btn" onclick="markDone()" style="display: none;">Done</button>
-            <p id="scores"></p>
-            <button onclick="finishGame()">Finish Game</button>
-        </div>
-        <button onclick="startNewGame()" id="new-game-btn" style="display: none;">Start New Game</button>
+
+    <h1>Truth and Dare Game</h1>
+    
+   
+    <div class="input-container">
+        <input type="text" id="player-name" placeholder="Enter player name">
+        <button class="btn" onclick="addPlayer()">Add Player</button>
     </div>
+    
+   
+    <div id="players-list"></div>
+    
+   
+    <div id="game-section" class="game-section" style="display:none;">
+        <p id="current-player" class="current-player">Select a player to play</p>
+        <div class="buttons-container">
+            <button class="btn" onclick="pickTruth()">Truth</button>
+            <button class="btn" onclick="pickDare()">Dare</button>
+        </div>
+        <p id="question" class="question"></p>
+        <p id="timer" class="timer"></p>
+        <button id="done-btn" class="btn" style="display:none;" onclick="markDone()">Done</button>
+    </div>
+    
+   
+    <div class="finish-container">
+        <button class="btn" onclick="finishGame()">Finish Game</button>
+    </div>
+    
+    
+    <div id="scores"></div>
+    
+    
+    <button id="new-game-btn" class="btn" style="display:none;" onclick="startNewGame()">Start New Game</button>
+
     <script src="script.js"></script>
+
 </body>
 </html>
